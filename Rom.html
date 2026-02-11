@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Only For You ❤️</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: white;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box {
+            background: rgba(0,0,0,0.45);
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 420px;
+        }
+        input {
+            padding: 12px;
+            width: 80%;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+        }
+        button {
+            margin-top: 18px;
+            padding: 12px 28px;
+            border-radius: 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            background: #ff4d6d;
+            color: white;
+        }
+        #message {
+            display: none;
+            margin-top: 35px;
+            font-size: 26px;
+            line-height: 1.5;
+            animation: fadeIn 3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .heart {
+            font-size: 40px;
+            margin-top: 15px;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>🔐 Only You Can Open This</h2>
+    <p>Enter Your Name Which I called 1st 💝</p>
+
+    <input type="password" id="code" placeholder="You know it 😉">
+    <br>
+    <button onclick="unlock()">Unlock ❤️</button>
+
+    <div id="message">
+        <p>Hey…<br>this is just for you.<br><strong>I love you.</strong></p>
+        <div class="heart">❤️</div>
+    </div>
+</div>
+
+<script>
+function unlock() {
+    const secret = "chocolate"; // CHANGE THIS
+    const input = document.getElementById("code").value;
+
+    if (input === secret) {
+        document.getElementById("message").style.display = "block";
+    } else {
+        alert("Hmm… only my wife knows this 😘");
+    }
+}
+</script>
+
+</body>
+</html>
